@@ -74,34 +74,6 @@ const Files = () => {
             });
     };
 
-    const handleDownload = (groupKey) => {
-        axios
-            .get(`/generate-pdf/${encodeURIComponent(groupKey)}`, {
-                responseType: "blob",
-            })
-            .then((response) => {
-                const fileName = response.headers["content-disposition"]
-                    .split("filename=")[1]
-                    .replace(/"/g, "");
-
-                const url = window.URL.createObjectURL(
-                    new Blob([response.data], { type: "application/pdf" })
-                );
-                const link = document.createElement("a");
-                link.href = url;
-                link.setAttribute(
-                    "download",
-                    fileName || `reporte_${groupKey}.pdf`
-                );
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            })
-            .catch((error) => {
-                console.error("Error al descargar el PDF:", error);
-            });
-    };
-
     return (
         <GuestLayout>
             <Head title="Generar PegaTickets" />
