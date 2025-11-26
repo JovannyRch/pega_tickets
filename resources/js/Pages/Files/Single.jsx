@@ -145,27 +145,6 @@ const Files = () => {
                                     <AiOutlineLoading3Quarters className="inline-block w-6 h-6 ml-2 animate-spin" />
                                 )}
                             </div>
-
-                            {/*  <ul className="space-y-2">
-                                {groups.map((groupKey) => (
-                                    <li
-                                        key={groupKey}
-                                        className="flex items-center justify-between p-3 bg-gray-100 rounded-md shadow-sm"
-                                    >
-                                        <span className="text-gray-800">
-                                            Pega ticket {groupKey}
-                                        </span>
-                                        <button
-                                            onClick={() =>
-                                                handleDownload(groupKey)
-                                            }
-                                            className="px-3 py-1 text-sm font-medium text-white transition duration-300 ease-in-out bg-green-500 rounded-md hover:bg-green-600"
-                                        >
-                                            Descargar PDF
-                                        </button>
-                                    </li>
-                                ))}
-                            </ul> */}
                         </>
                     )}
                 </div>

@@ -99,7 +99,7 @@
 
 <body>
     <div id="watermark">
-        <img src="img/marca_vertical.png" height="100%" width="100%" />
+        <img src="img/marca_vertical.svg" height="100%" width="100%" />
     </div>
     <main>
 
